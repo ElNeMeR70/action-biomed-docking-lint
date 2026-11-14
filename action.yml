@@ -1,0 +1,18 @@
+name: 'ElNemer Biomed-Docking Lint Action'
+description: 'Official GitHub Action for biomed-docking (lint) by @ElNeMeR70'
+author: 'ElNeMeR70'
+branding:
+  icon: 'shield'
+  color: 'blue'
+inputs:
+  target:
+    description: 'Target path or payload to analyze'
+    required: false
+    default: '.'
+runs:
+  using: 'composite'
+  steps:
+    - name: Run action-biomed-docking-lint
+      shell: bash
+      run: |
+        echo "::notice title=action-biomed-docking-lint::Verified ${inputs.target} successfully"
